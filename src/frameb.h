@@ -4,8 +4,8 @@
 #include <cmath>
 
 // Tamaño del framebuffer
-const int altura = 1600;
-const int anchura = 1200;
+const int altura = 600;
+const int anchura = 800;
 
 // Framebuffer
 std::vector<Color> framebuffer(anchura * altura);
