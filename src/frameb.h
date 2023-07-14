@@ -212,8 +212,8 @@ void fillPolygon(const std::vector<Vertex2>& vertices, bool isHole = false) {
 }
 
 
-std::vector<Vertex2> polygon1() {
-    return {{165, 380}, {185, 360}, {180, 330}, {207, 345}, {233, 330}, {230, 360}, {250, 380}, {220, 385}, {205, 410}, {193, 383}};
+std::vector<Vertex2> polygon2() {
+    return {{321, 335}, {288, 286}, {339, 251}, {374, 302}};
 }
 
 
@@ -221,11 +221,11 @@ std::vector<Vertex2> polygon1() {
 void render() {
     clear();
 
-    // Dibujar el polígono 1
-    setCurrentColor(Color(255, 255, 0));  // Color amarillo
-    fillPolygon(polygon1());
+    // Dibujar el polígono 2
+    setCurrentColor(Color(0, 0, 255));  // Color azul
+    fillPolygon(polygon2());
     setCurrentColor(Color(255, 255, 255));  // Color blanco
-    drawPolygon(polygon1());
+    drawPolygon(polygon2());
 
 
     renderBuffer();
