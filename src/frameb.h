@@ -220,6 +220,10 @@ std::vector<Vertex2> polygon2() {
     return {{321, 335}, {288, 286}, {339, 251}, {374, 302}};
 }
 
+std::vector<Vertex2> polygon3() {
+    return {{377, 249}, {411, 197}, {436, 249}};
+}
+
 
 
 void render() {
@@ -236,6 +240,12 @@ void render() {
     fillPolygon(polygon2());
     setCurrentColor(Color(255, 255, 255));  // Color blanco
     drawPolygon(polygon2());
+
+    // Dibujar el polígono 3
+    setCurrentColor(Color(255, 0, 0));  // Color rojo
+    fillPolygon(polygon3());
+    setCurrentColor(Color(255, 255, 255));  // Color blanco
+    drawPolygon(polygon3());
 
 
     renderBuffer();
