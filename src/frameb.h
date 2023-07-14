@@ -224,6 +224,16 @@ std::vector<Vertex2> polygon3() {
     return {{377, 249}, {411, 197}, {436, 249}};
 }
 
+std::vector<Vertex2> polygon4() {
+    return {{413, 177}, {448, 159}, {502, 88}, {553, 53}, {535, 36}, {676, 37}, {660, 52},
+            {750, 145}, {761, 179}, {672, 192}, {659, 214}, {615, 214}, {632, 230}, {580, 230},
+            {597, 215}, {552, 214}, {517, 144}, {466, 180}};
+}
+
+std::vector<Vertex2> polygon5() {
+    return {{682, 175}, {708, 120}, {735, 148}, {739, 170}};
+}
+
 
 
 void render() {
@@ -246,6 +256,14 @@ void render() {
     fillPolygon(polygon3());
     setCurrentColor(Color(255, 255, 255));  // Color blanco
     drawPolygon(polygon3());
+
+    // Dibujar el polígono 4 con el polígono 5 como un agujero
+    setCurrentColor(Color(0, 255, 0));  // Color verde
+    fillPolygon(polygon4());
+    fillPolygon(polygon5(), true);  // Polígono 5 como un agujero
+    setCurrentColor(Color(255, 255, 255));  // Color blanco
+    drawPolygon(polygon4());
+    drawPolygon(polygon5());
 
 
     renderBuffer();
